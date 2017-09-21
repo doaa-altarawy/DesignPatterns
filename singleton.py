@@ -4,14 +4,14 @@
 
 class Singleton(object):
     """Singleton class"""
-    __shared_state = {}
+    _shared_state = {}
 
     def __init__(self, **kwargs):
-        self.__dict__ = self.__shared_state
-        self.__shared_state.update(kwargs)
+        self.__dict__ = self._shared_state
+        self._shared_state.update(kwargs)
 
     def __str__(self):
-        return str(self.__shared_state)
+        return str(self._shared_state)
 
 
 param = Singleton(VT='Virginia Tech')
