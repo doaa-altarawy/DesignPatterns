@@ -4,15 +4,14 @@
 
 class Singleton(object):
     """Singleton class"""
-    _shared_state = {} # shared dictionary
+    _shared_data = {} # shared dictionary
 
     def __init__(self, **kwargs):
-        self.__dict__ = self._shared_state
-        self._shared_state.update(kwargs)
+        self.__dict__ = self._shared_data
+        self._shared_data.update(kwargs)
 
     def __str__(self):
-        return str(self._shared_state)
-
+        return str(self._shared_data)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
